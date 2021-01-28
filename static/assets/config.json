@@ -1,0 +1,384 @@
+{
+	"size": {
+		"x": 720,
+		"y": 480
+	},
+	"scaleMode": "fit",
+	"layers": {
+		"bg": {
+			"type": "cycle",
+			"x": 0.5,
+			"y": 0.5,
+			"data": {
+				"arrowX": 0.194,
+				"arrowY": 0.265,
+				"arrowGap": 0.49,
+				"items": [{
+						"spr": "bg 1"
+					},
+					{
+						"spr": "bg 2"
+					},
+					{
+						"spr": "bg 3"
+					},
+					{
+						"spr": "bg 4"
+					},
+					{
+						"spr": "bg 5"
+					},
+					{
+						"spr": "bg 6"
+					},
+					{
+						"spr": "bg 7"
+					},
+					{
+						"spr": "bg 8"
+					},
+					{
+						"spr": "bg 9"
+					},
+					{
+						"spr": "bg 10"
+					},
+					{
+						"spr": "bg 11"
+					},
+					{
+						"spr": "bg 12"
+					},
+					{
+						"spr": "bg 13"
+					},
+					{
+						"spr": "bg 14"
+					},
+					{
+						"spr": "bg 15"
+					},
+					{
+						"spr": "bg 16"
+					},
+					{
+						"spr": "bg 17"
+					},
+					{
+						"spr": "bg 18"
+					},
+					{
+						"spr": "bg 19"
+					},
+					{
+						"spr": "bg 20"
+					},
+					{
+						"spr": "bg 21"
+					},
+					{
+						"spr": "bg 22"
+					},
+					{
+						"spr": "bg 23"
+					},
+					{
+						"spr": "bg 24"
+					},
+					{
+						"spr": "bg 25"
+					}
+				]
+			}
+		},
+		"base": {
+			"type": "cycle",
+			"x": 0.76,
+			"y": 0.527,
+			"data": {
+				"arrowX": -0.065,
+				"arrowY": -0.4,
+				"arrowGap": 0.49,
+				"items": [{
+						"spr": "cat_orange"
+					},
+					{
+						"spr": "cat_white"
+					},
+					{
+						"spr": "cat_grey"
+					},
+					{
+						"spr": "cat_black"
+					},
+					{
+						"spr": "cat_calico"
+					},
+					{
+						"spr": "cat_cow"
+					}
+				]
+			}
+		},
+		"eyes": {
+			"type": "cycle",
+			"x": 0.655,
+			"y": 0.377,
+			"data": {
+				"arrowX": 0.04,
+				"arrowY": -0.1,
+				"arrowGap": 0.49,
+				"items": [{
+						"spr": "eyes 1"
+					},
+					{
+						"spr": "eyes 2"
+					},
+					{
+						"spr": "eyes 3"
+					},
+					{
+						"spr": "eyes 4"
+					},
+					{
+						"spr": "eyes 5"
+					},
+					{
+						"spr": "eyes 6"
+					},
+					{
+						"spr": "eyes 7"
+					},
+					{
+						"spr": "eyes 8"
+					},
+					{
+						"spr": "eyes 9"
+					}
+				]
+			}
+		},
+		"mouth": {
+			"type": "cycle",
+			"x": 0.655,
+			"y": 0.377,
+			"data": {
+				"arrowX": 0.04,
+				"arrowY": 0.05,
+				"arrowGap": 0.49,
+				"items": [{
+						"spr": "mouth 1"
+					},
+					{
+						"spr": "mouth 2"
+					},
+					{
+						"spr": "mouth 3"
+					},
+					{
+						"spr": "mouth 4"
+					},
+					{
+						"spr": "mouth 5"
+					},
+					{
+						"spr": "mouth 6"
+					},
+					{
+						"spr": "mouth 7"
+					},
+					{
+						"spr": "mouth 8"
+					},
+					{
+						"spr": "mouth 9"
+					},
+					{
+						"spr": "mouth 10"
+					},
+					{
+						"spr": "mouth 11"
+					}
+				]
+			}
+		},
+		"collar": {
+			"type": "cycle",
+			"x": 0.7175,
+			"y": 0.64,
+			"data": {
+				"arrowX": -0.023,
+				"arrowY": -0.04725,
+				"arrowGap": 0.49,
+				"items": [{
+						"spr": "collar_red"
+					},
+					{
+						"spr": "collar_blue"
+					},
+					{
+						"spr": "collar_yellow"
+					},
+					{
+						"spr": "collar_green"
+					},
+					{
+						"spr": "collar_purple"
+					},
+					{
+						"spr": "collar_white"
+					},
+					{
+						"spr": "collar_black"
+					}
+				]
+			}
+		},
+		"bit": {
+			"type": "drag-and-drop",
+			"data": {
+				"items": [{
+						"spr": "bow_red",
+						"x": 0.07,
+						"y": 0.1
+					},
+					{
+						"spr": "bow_blue",
+						"x": 0.165,
+						"y": 0.1
+					},
+					{
+						"spr": "bow_yellow",
+						"x": 0.26,
+						"y": 0.1
+					},
+					{
+						"spr": "bow_green",
+						"x": 0.355,
+						"y": 0.1
+					},
+					{
+						"spr": "square_silver",
+						"x": 0.07,
+						"y": 0.2
+					},
+					{
+						"spr": "square_gold",
+						"x": 0.165,
+						"y": 0.2
+					},
+					{
+						"spr": "circle_silver",
+						"x": 0.26,
+						"y": 0.2
+					},
+					{
+						"spr": "circle_gold",
+						"x": 0.355,
+						"y": 0.2
+					},
+					{
+						"spr": "spike_silver",
+						"x": 0.07,
+						"y": 0.3
+					},
+					{
+						"spr": "spike_gold",
+						"x": 0.165,
+						"y": 0.3
+					},
+					{
+						"spr": "bell_silver",
+						"x": 0.26,
+						"y": 0.3
+					},
+					{
+						"spr": "bell_gold",
+						"x": 0.355,
+						"y": 0.3
+					},
+					{
+						"spr": "bow_purple",
+						"x": 0.07,
+						"y": 0.41
+					},
+					{
+						"spr": "gem_purple",
+						"x": 0.165,
+						"y": 0.41
+					},
+					{
+						"spr": "purple_smile",
+						"x": 0.26,
+						"y": 0.41
+					},
+					{
+						"spr": "purple_star",
+						"x": 0.355,
+						"y": 0.41
+					},
+					{
+						"spr": "gem_red",
+						"x": 0.07,
+						"y": 0.53
+					},
+					{
+						"spr": "gem_blue",
+						"x": 0.165,
+						"y": 0.53
+					},
+					{
+						"spr": "gem_yellow",
+						"x": 0.26,
+						"y": 0.53
+					},
+					{
+						"spr": "gem_green",
+						"x": 0.355,
+						"y": 0.53
+					},
+					{
+						"spr": "ditag_silver",
+						"x": 0.07,
+						"y": 0.68
+					},
+					{
+						"spr": "ditag_gold",
+						"x": 0.165,
+						"y": 0.68
+					},
+					{
+						"spr": "tag_silver",
+						"x": 0.26,
+						"y": 0.68
+					},
+					{
+						"spr": "tag_gold",
+						"x": 0.355,
+						"y": 0.68
+					},
+					{
+						"spr": "holly",
+						"x": 0.07,
+						"y": 0.85
+					},
+					{
+						"spr": "snowflake",
+						"x": 0.165,
+						"y": 0.85
+					},
+					{
+						"spr": "sweetheart",
+						"x": 0.26,
+						"y": 0.85
+					},
+					{
+						"spr": "crown",
+						"x": 0.355,
+						"y": 0.85
+					}
+				]
+			}
+		}
+	}
+}
