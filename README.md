@@ -1,6 +1,12 @@
 # DRESS UP GAME
 
-based on Collar Me Impressed
+Made by IAN MARTIN for _Whose Pleasure is it Anyway?_
+
+Based on Collar Me Impressed by Sweetheart Squad.
+
+Coding help from Sean S. Leblanc.
+
+Music by Kevin Macleod.
 
 ## Setup
 
