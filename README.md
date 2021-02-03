@@ -1,12 +1,14 @@
 # DRESS UP GAME
 
-Made by IAN MARTIN for _Whose Pleasure is it Anyway?_
+Made by IAN MARTIN for _Whose Pleasure is it Anyway?_ hosted by Canthius.
 
-Based on Collar Me Impressed by Sweetheart Squad.
+Based on Collar Me Impressed by [Sweetheart Squad](https://sweetheartsquad.itch.io/).
 
-Coding help from Sean S. Leblanc.
+Coding help from [Sean S. Leblanc](https://seans.site).
 
 Music by Kevin Macleod.
+
+[Error sound](https://soundbible.com/1540-Computer-Error-Alert.html) by Mike Koenig. Used under [CC Attribution 3.0](https://creativecommons.org/licenses/by/3.0/legalcode).
 
 ## Setup
 
