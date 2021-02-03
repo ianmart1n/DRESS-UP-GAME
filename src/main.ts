@@ -21,6 +21,10 @@ let mouseSpr: ItemDraggable & {
 };
 let renderer: Renderer;
 const hideOnSave: DisplayObject[] = [];
+let layers: Record<string, Layer>;
+let badCount: number;
+let badItem: boolean;
+let modelDone: boolean;
 
 function setFilter(index, fragment: string, uniforms: any) {
 	const filter = new Filter(undefined, Loader.shared.resources[fragment].data, uniforms);
@@ -82,8 +86,12 @@ export function init() {
 	const config = Loader.shared.resources.config.data as Config;
 	const ui = new Container();
 
+  badCount = 0;
+	badItem = false;
+	modelDone = false;
+
 	// make layers
-	const layers: Record<string, Layer> = Object.entries(config.layers).reduce((result, [key, layerConfig]) => {
+	layers = Object.entries(config.layers).reduce((result, [key, layerConfig]) => {
 		const layer = new Layer(layerConfig);
 
 		if (layerConfig.type === 'static') {
@@ -120,7 +128,16 @@ export function init() {
 					hideOnSave.push(item.spr);
 				}
 			});
-		} else if (layerConfig.type === 'cycle') {
+		} else if (layerConfig.type === 'cycle' && key === 'bubble') {
+			layerConfig.data.items.forEach(itemConfig => {
+				const item = new ItemStatic(itemConfig);
+				item.spr.visible = false;
+				layer.addChild(item.spr);
+			  //hideOnSave.push(item.spr);
+			});
+			layer.children[0].visible = true;
+
+		} else if (layerConfig.type === 'cycle' && key != 'bubble') {
 			layerConfig.data.items.forEach(itemConfig => {
 				const item = new ItemStatic(itemConfig);
 				item.spr.visible = false;
@@ -204,6 +221,7 @@ export function init() {
 	hideOnSave.push(save.spr);
 
 	ui.addChild(save.spr);
+
 	stage.addChild(ui);
 
 	stage.addChild(mouseSpr.spr);
@@ -240,6 +258,30 @@ function update() {
 		}
 	}
 
+	layers['bad_clothes'].children.forEach(child => {
+		if(isClose(child.x, child.y, layers['gender'].x, layers['gender'].y)) {
+			badItem = true;
+		} else {
+			badItem = false;
+	  }
+	})
+
+	if (badCount >= 8) {
+		modelDone = true;
+		layers['gender'].visible = false;
+		layers['undies'].visible = false;
+		swapBubble();
+		badCount = 0;
+	}
+
+	if (mouse.isJustDown() && Interactive.target) {
+		if(Interactive.target.bad === true && modelDone === false) {
+			badItem = true;
+			badCount = badCount + 1;
+		}
+		swapBubble();
+	}
+
 	mouseSpr.v.x = mouse.pos.x - mouseSpr.spr.x;
 	mouseSpr.v.y = mouse.pos.y - mouseSpr.spr.y;
 	mouseSpr.angle = 0;
@@ -255,6 +297,30 @@ function update() {
 		filter.uniforms.time = Ticker.shared.lastTime;
 		filter.uniforms.mouse = [mouse.pos.x / size.x, mouse.pos.y / size.y];
 	});
+}
+
+function isClose(x1: number, y1: number, x2: number, y2: number): boolean {
+  if (Math.abs(x2 - x1) < 100 && Math.abs(y2 - y1) < 100) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function swapBubble() {
+		if (modelDone === true){
+			layers['bubble'].children[layers['bubble'].active].visible = false;
+			layers['bubble'].active = Math.floor(Math.random() * 1 + 7);
+			layers['bubble'].children[layers['bubble'].active].visible = true;
+		}	else if (badItem === true) {
+			layers['bubble'].children[layers['bubble'].active].visible = false;
+			layers['bubble'].active = Math.floor(Math.random() * 3 + 4);
+			layers['bubble'].children[layers['bubble'].active].visible = true;
+		} else {
+			layers['bubble'].children[layers['bubble'].active].visible = false;
+			layers['bubble'].active = Math.floor(Math.random() * 3 + 1);
+			layers['bubble'].children[layers['bubble'].active].visible = true;
+		}
 }
 
 function render() {
@@ -274,7 +340,7 @@ function saveImage() {
 	const url = renderer.view.toDataURL();
 	const a = document.createElement('a');
 	document.body.append(a);
-	a.download = 'my cat';
+	a.download = 'my outfit';
 	a.href = url;
 	a.click();
 	a.remove();

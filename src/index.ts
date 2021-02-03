@@ -5,6 +5,7 @@ const loading = document.createElement('p');
 loading.innerText = 'Loading...';
 document.body.appendChild(loading);
 
+
 requestAnimationFrame(async () => {
 	try {
 		const { load } = await import('./loader');

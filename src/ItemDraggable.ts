@@ -10,7 +10,7 @@ export class ItemDraggable extends Interactive {
 		this.v.x += (mouse.pos.x - this.spr.x - ItemDraggable.offset.x) / 4;
 		this.v.y += (mouse.pos.y - this.spr.y - ItemDraggable.offset.y) / 4;
 		this.angle += mouse.mouseWheel * 15;
-		this.selectAnim = lerp(this.selectAnim, 0.9, 0.1);
+		this.selectAnim = lerp(this.selectAnim, 1.0, 0.1);
 	}
 	static dragging: ItemDraggable = null;
 	static target: ItemDraggable = null;

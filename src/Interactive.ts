@@ -14,6 +14,7 @@ export class Interactive extends EventEmitter<'click' | 'release', never> {
 	id: number;
 	selected = false;
 	disposable = true;
+	bad = false;
 	constructor({ spr, x, y, scale }: ItemConfig) {
 		super();
 		this.scale = scale || 1;
@@ -23,6 +24,10 @@ export class Interactive extends EventEmitter<'click' | 'release', never> {
 		sprite.y = (y || 0) * size.y;
 		sprite.scale.x = sprite.scale.y = this.scale;
 		this.spr = sprite;
+		//check if it's bad
+		if (spr.includes("bad")) {
+			this.bad = true;
+		}
 
 		Interactive.interactives.push(this);
 		this.id = Interactive.interactives.length;

@@ -1,13 +1,13 @@
 {
-  "name": "collar-me-impressed",
-  "version": "1.2.0",
-  "description": "Design an elegant cat collar with ease and speed!",
+  "name": "dress-up-game",
+  "version": "1.0.0",
+  "description": "Dress up a model.",
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "rm -rf .cache && rm -rf dist && parcel build index.html --no-source-maps --public-url ./"
   },
-  "author": "Sean S. LeBlanc <sean.s.leblanc@gmail.com>",
+  "author": "Sean S. LeBlanc <sean.s.leblanc@gmail.com> & IAN MARTIN <ian.martin@rogers.com>",
   "license": "MIT",
   "devDependencies": {
     "parcel": "^1.12.4",
