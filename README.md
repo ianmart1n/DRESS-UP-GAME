@@ -2,7 +2,7 @@
 
 Made by IAN MARTIN for _Whose Pleasure is it Anyway?_ hosted by Canthius.
 
-Based on Collar Me Impressed by [Sweetheart Squad](https://sweetheartsquad.itch.io/).
+Built from [Collar Me Impressed](https://sweetheartsquad.itch.io/collar-me-impressed) by [Sweetheart Squad](https://sweetheartsquad.itch.io/).
 
 Coding help from [Sean S. Leblanc](https://seans.site).
 
