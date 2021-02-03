@@ -264,7 +264,7 @@ function update() {
 		} else {
 			badItem = false;
 	  }
-	})
+	});
 
 	if (badCount >= 8) {
 		modelDone = true;

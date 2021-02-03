@@ -118,6 +118,30 @@
 				]
 			}
 		},
+		"labels": {
+			"type": "static",
+			"x": 0.75,
+			"y": 0.25,
+			"data": {
+				"items": [{
+						"spr": "gender_label",
+						"x": 0,
+						"y": 0
+					},
+					{
+						"spr": "undies_label"
+						,
+						"x": 0,
+						"y": 0.225
+					},
+					{
+						"spr": "background_label",
+						"x": 0,
+						"y": 0.44
+					}
+				]
+			}
+		},
 		"bad_clothes": {
 			"type": "drag-and-drop",
 			"data": {
