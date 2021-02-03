@@ -1,6 +1,6 @@
 # DRESS UP GAME
 
-Made by IAN MARTIN for _Whose Please is it Anyway?_
+Made by IAN MARTIN for _Whose Pleasure is it Anyway?_
 
 Based on Collar Me Impressed by Sweetheart Squad.
 
