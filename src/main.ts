@@ -231,7 +231,7 @@ export function init() {
 	const bgm = Loader.shared.resources.bgm.data as Howl;
 	bgm.loop(true);
 	const bgmId = bgm.play();
-	bgm.fade(0, 1, 2000, bgmId);
+	bgm.fade(0, 0.75, 2000, bgmId);
 }
 
 function main() {
@@ -278,6 +278,7 @@ function update() {
 		if(Interactive.target.bad === true && modelDone === false) {
 			badItem = true;
 			badCount = badCount + 1;
+			Loader.shared.resources.error.data.play();
 		}
 		swapBubble();
 	}
@@ -300,7 +301,7 @@ function update() {
 }
 
 function isClose(x1: number, y1: number, x2: number, y2: number): boolean {
-  if (Math.abs(x2 - x1) < 100 && Math.abs(y2 - y1) < 100) {
+  if (Math.abs(x2 - x1) < 250 && Math.abs(y2 - y1) < 250) {
 		return true;
 	} else {
 		return false;
@@ -318,7 +319,7 @@ function swapBubble() {
 			layers['bubble'].children[layers['bubble'].active].visible = true;
 		} else {
 			layers['bubble'].children[layers['bubble'].active].visible = false;
-			layers['bubble'].active = Math.floor(Math.random() * 3 + 1);
+			layers['bubble'].active = Math.floor(Math.random() * 4);
 			layers['bubble'].children[layers['bubble'].active].visible = true;
 		}
 }
